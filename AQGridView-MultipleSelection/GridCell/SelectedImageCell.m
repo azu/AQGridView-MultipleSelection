@@ -85,7 +85,9 @@
 
     if (self.isChecked){
         self.checkImageView.hidden = NO;
-        self.checkImageView.frame = CGRectMake(frame.size.width - self.checkImageView.frame.size.width, frame.size.height - self.checkImageView.frame.size.height, self.checkImageView.frame.size.width, self.checkImageView.frame.size.height);
+        self.checkImageView.frame = CGRectMake(bounds.size.width - self.checkImageView.frame.size.width,
+            bounds.size.height - self.checkImageView.frame.size.height,
+            self.checkImageView.frame.size.width, self.checkImageView.frame.size.height);
     } else {
         self.checkImageView.hidden = YES;
     }
