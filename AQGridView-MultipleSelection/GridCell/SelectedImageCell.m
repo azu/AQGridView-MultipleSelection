@@ -41,18 +41,19 @@
     [self.contentView addSubview:self.imageView];
     [self.contentView addSubview:self.checkImageView];
 
-    return (self);
+    return self;
 }
 
 
 - (UIImage *)image {
-    return (self.imageView.image);
+    return self.imageView.image;
 }
 
 - (void)setImage:(UIImage *)anImage {
     self.imageView.image = anImage;
     [self setNeedsLayout];
 }
+
 - (void)setIsChecked:(BOOL)anIsChecked {
     isChecked_ = anIsChecked;
     [self setNeedsLayout];
@@ -85,7 +86,7 @@
     if (self.isChecked){
         self.checkImageView.hidden = NO;
         self.checkImageView.frame = CGRectMake(frame.size.width - self.checkImageView.frame.size.width, frame.size.height - self.checkImageView.frame.size.height, self.checkImageView.frame.size.width, self.checkImageView.frame.size.height);
-    }else {
+    } else {
         self.checkImageView.hidden = YES;
     }
 }
