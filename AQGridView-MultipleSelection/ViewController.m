@@ -118,6 +118,8 @@
         [self.selectedIndexSet addIndex:index];
     }
     [self updateCell:[self.gridView cellForItemAtIndex:index] cellForItemAtIndex:index];
+    // for toggle - doesn't call didSelectItemAtIndex unless GridView#deselectItemAtIndex
+    [self.gridView deselectItemAtIndex:index animated:YES];
 }
 
 #pragma mark - view will
