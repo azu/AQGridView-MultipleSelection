@@ -60,6 +60,7 @@
     self.gridView.autoresizesSubviews = YES;
     self.gridView.delegate = self;
     self.gridView.dataSource = self;
+    [self.gridView reloadData];
     [self.view addSubview:self.gridView];
     // BarButtonItem Action
     self.selectBarButton.action = @selector(selectAll);
@@ -125,8 +126,7 @@
 #pragma mark - view will
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-    [self.gridView reloadData];
+    [self updateVisibleCells];
 }
 
 - (void)viewDidLoad {
