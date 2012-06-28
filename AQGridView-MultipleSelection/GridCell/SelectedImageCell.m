@@ -32,7 +32,7 @@
     }
 
     self.isChecked = NO;
-    self.checkImageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell-checkmark.png"]] autorelease];
+    self.checkImageView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_checkmark.png"]] autorelease];
     self.imageView = [[[UIImageView alloc] initWithFrame:CGRectZero] autorelease];
     self.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
     self.contentView.backgroundColor = self.backgroundColor;
